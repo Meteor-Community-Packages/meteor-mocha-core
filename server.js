@@ -26,7 +26,7 @@ function setupGlobals(mocha) {
     //forking mocha itself.
 
     const wrappedFunction = function (done) {
-      var self = this._runnable;
+      var self = this._runnable || {};
       var run = function() {
         try {
           // Sync call
