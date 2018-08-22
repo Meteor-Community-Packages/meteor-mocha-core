@@ -32,6 +32,7 @@ function setupGlobals(mocha) {
           // Sync call
           if (fn.length == 0) {
             var result = fn.call(self);
+
             if (result && typeof result.then === 'function') {
               self.resetTimeout();
               result
@@ -45,7 +46,7 @@ function setupGlobals(mocha) {
                     done(reason || new Error('Promise rejected with no or falsy reason'));
                   });
             } else {
-              if (self.asyncOnly) {
+              if (self && self.asyncOnly) {
                 return done(new Error('--async-only option in use without declaring `done()` or returning a promise'));
               }
 
@@ -78,6 +79,7 @@ function setupGlobals(mocha) {
     if (func) {
       func = wrapRunnable(func);
     }
+
     return mochaExports["__org_it"](name, func);
   };
   mochaExports.it.skip = mochaExports["__org_it"].skip;
