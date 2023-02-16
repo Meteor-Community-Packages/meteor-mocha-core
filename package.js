@@ -1,6 +1,6 @@
 Package.describe({
-  name: 'grubba:mocha-core',
-  summary: 'Internal package used by grubba:mocha.',
+  name: 'meteortesting:mocha-core',
+  summary: 'Internal package used by meteortesting:mocha.',
   version: '8.2.1',
   testOnly: true,
   git: 'https://github.com/meteortesting/meteor-mocha-core.git'
