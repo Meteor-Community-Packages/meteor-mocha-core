@@ -1,7 +1,6 @@
 import "./setup"
 import "./cleanup"
 
-import Fiber from 'fibers';
 import Mocha from 'mocha';
 import config from './loadConfig';
 
@@ -61,9 +60,7 @@ function setupGlobals(mocha) {
           done(error);
         }
       };
-
-      if (Fiber.current) return run();
-      Fiber(run).run();
+      return run()
     };
 
     // Show original function source code
