@@ -1,7 +1,7 @@
 Package.describe({
-  name: 'meteortesting:mocha-core',
+  name: 'grubba:mocha-core',
   summary: 'Internal package used by meteortesting:mocha.',
-  version: '8.2.1',
+  version: '8.2.2-alpha300.9',
   testOnly: true,
   git: 'https://github.com/meteortesting/meteor-mocha-core.git'
 });
@@ -11,7 +11,7 @@ Npm.depends({
 });
 
 Package.onUse(function (api, where) {
-  api.use('ecmascript@0.16.5');
+  api.use('ecmascript@1.0.0-alpha300.9');
 
   api.mainModule('client.js', 'client');
   api.mainModule('server.js', 'server');
