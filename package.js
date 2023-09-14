@@ -1,7 +1,7 @@
 Package.describe({
-  name: 'grubba:mocha-core',
+  name: 'denyhs:mocha-core',
   summary: 'Internal package used by meteortesting:mocha.',
-  version: '8.2.2-alpha300.10',
+  version: '8.2.2-alpha300.11',
   testOnly: true,
   git: 'https://github.com/meteortesting/meteor-mocha-core.git'
 });
