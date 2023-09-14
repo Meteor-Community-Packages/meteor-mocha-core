@@ -1,5 +1,5 @@
 Package.describe({
-  name: 'denyhs:mocha-core',
+  name: 'meteortesting:mocha-core',
   summary: 'Internal package used by meteortesting:mocha.',
   version: '8.2.2-alpha300.11',
   testOnly: true,
